@@ -3,6 +3,8 @@
   "description": "",
   "keywords": ["noedjs"],
   "success_url": "/",
+  "repository": "https://github.com/lyfe05/levanter",
+	"stack": "container",
   "env": {
     "ALWAYS_ONLINE": {
       "description": "show bot number last seen as online",
@@ -130,8 +132,18 @@
   ],
 
   "buildpacks": [
-    { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" },
-    { "url": "https://github.com/carlosdommor/heroku-buildpack-ffmpeg-latest" }
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
   ],
   "formation": {
     "web": {
